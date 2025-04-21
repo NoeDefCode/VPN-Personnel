@@ -9,4 +9,6 @@ sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public
 4. Je compte utiliser Wireguard en Ipv6, je dois donc commencer par générer une adresse Ipv6 La manière manière pour commencer est de générer un 64-bit timestamp avec : date +%s%N
 5. Récupération de mon identifiant unique de machine avec : cat /var/lib/dbus/machine-id
 6. J'utilise ensuite ces deux suites de nombres pour les mélanger gtrâce à l'algorithme SHA 1- Algorithme.
-7. 
+7. J'obtiens alors un préfixe ULA unique et surtout stable pour chaque client, je l'utilise pour créer les adresses ipv6 pour le serveur et le premier client.
+8. 
+ 
