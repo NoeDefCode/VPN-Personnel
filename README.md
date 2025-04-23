@@ -11,5 +11,4 @@ sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public
 6. J'utilise ensuite ces deux suites de nombres pour les mélanger gtrâce à l'algorithme SHA 1- Algorithme.
 7. J'obtiens alors un préfixe ULA unique et surtout stable pour chaque client, je l'utilise pour créer les adresses ipv6 pour le serveur et le premier client.
 8. Maintenant je vais commencer à configurer mon serveur wireguard avec l'adresse ipv6 nouvellement crée :
-
- 
+![screen 1](https://github.com/user-attachments/assets/ddd9ef87-1a43-4a41-ab63-5bd7250e59b4)
