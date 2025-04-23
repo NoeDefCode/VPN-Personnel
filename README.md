@@ -12,3 +12,5 @@ sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public
 7. J'obtiens alors un préfixe ULA unique et surtout stable pour chaque client, je l'utilise pour créer les adresses ipv6 pour le serveur et le premier client.
 8. Maintenant je vais commencer à configurer mon serveur wireguard avec l'adresse ipv6 nouvellement crée :
 ![screen 1](https://github.com/user-attachments/assets/ddd9ef87-1a43-4a41-ab63-5bd7250e59b4)
+Dans ce terminal, je rentre les informations de ma clé privé, ainsi que de l'adresse iov6 utilisé pour serveur.
+9. 
