@@ -13,4 +13,6 @@ sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public
 8. Maintenant je vais commencer à configurer mon serveur wireguard avec l'adresse ipv6 nouvellement crée :
 ![screen 1](https://github.com/user-attachments/assets/ddd9ef87-1a43-4a41-ab63-5bd7250e59b4)
 Dans ce terminal, je rentre les informations de ma clé privé, ainsi que de l'adresse iov6 utilisé pour serveur.
-9. 
+9. Je vais maintenant ajuster les paramètres pour utiliser Wireguard sur le traffic internet :
+j'utilise un ipv6, je met dans donc cette ligne en premier dans mes paramètres : 
+![Screenshot_2025-04-23_06_22_27](https://github.com/user-attachments/assets/242dfb5c-6197-4339-a315-f0a3af7f786c)
