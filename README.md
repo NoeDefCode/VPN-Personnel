@@ -16,5 +16,5 @@ Dans ce terminal, je rentre les informations de ma clé privé, ainsi que de l'a
 9. Je vais maintenant ajuster les paramètres pour utiliser Wireguard sur le traffic internet :
 j'utilise un ipv6, je met dans donc cette ligne en premier dans mes paramètres : 
 ![Screenshot_2025-04-23_06_22_27](https://github.com/user-attachments/assets/242dfb5c-6197-4339-a315-f0a3af7f786c)
-Mon serveur Wireguard peut désormais transférer du traffic entrant du VPN virtuel sur d'autres serveurs, puis vers l'internet publics. Cela me permet d'acheminer tout le traffic web de mon homologue wireguard via l'adresse ip de mon serveur, et l'adresse ip public de mon client sera masqué. Grâceà cela, on peut presque dire que mon traffic est anonyme, cepandant, il n'est pas encore sécurisé, pour cela je vais devoir ajuster les paramètres du Pare Feu.
+Mon serveur Wireguard peut désormais transférer du traffic entrant du VPN virtuel sur d'autres serveurs, puis vers l'internet publics. Cela me permet d'acheminer tout le traffic web de mon homologue wireguard via l'adresse ip de mon serveur, et l'adresse ip public de mon client sera masqué. Grâce à cela, on peut presque dire que mon traffic est anonyme, cepandant, il n'est pas encore sécurisé. pour ce faire, je vais devoir ajuster les paramètres du Pare Feu.
 10. 
