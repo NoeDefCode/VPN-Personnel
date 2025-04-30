@@ -17,4 +17,14 @@ Dans ce terminal, je rentre les informations de ma clé privé, ainsi que de l'a
 j'utilise un ipv6, je met dans donc cette ligne en premier dans mes paramètres : 
 ![Screenshot_2025-04-23_06_22_27](https://github.com/user-attachments/assets/242dfb5c-6197-4339-a315-f0a3af7f786c)
 Mon serveur Wireguard peut désormais transférer du traffic entrant du VPN virtuel sur d'autres serveurs, puis vers l'internet publics. Cela me permet d'acheminer tout le traffic web de mon homologue wireguard via l'adresse ip de mon serveur, et l'adresse ip public de mon client sera masqué. Grâce à cela, on peut presque dire que mon traffic est anonyme, cepandant, il n'est pas encore sécurisé. pour ce faire, je vais devoir ajuster les paramètres du Pare Feu.
-10. 
+
+10. Dans cette partie, j’ai configuré mon serveur WireGuard afin de permettre et de router correctement le trafic VPN à travers le pare-feu à l’aide d’UFW et d’iptables. Cela permet notamment d’activer la translation d’adresses (NAT) pour que les clients puissent accéder à Internet via le serveur.
+
+Une étape essentielle était d’ajouter des règles « PostUp » et « PreDown » dans le fichier de configuration /etc/wireguard/wg0.conf pour autoriser le trafic entre l’interface VPN (wg0) et l’interface réseau publique (ex. eth0) via UFW et d’activer le masquerading avec iptables/ip6tables pour IPv4 et IPv6.
+
+J’ai aussi ouvert les ports nécessaires (51820/udp pour WireGuard, et SSH pour l’accès distant), puis redémarré UFW pour appliquer les nouvelles règles.
+
+Problème rencontré :
+J’avais oublié d’installer UFW avant de lancer le serveur, ce qui empêchait WireGuard de démarrer correctement, car les commandes ufw route dans la configuration échouaient. Après l’installation d’UFW et l’application des règles, le service a pu fonctionner comme prévu.
+
+Cette démarche assure que la sécurité et le routage du VPN sont pris en compte et évite les erreurs liées à l’absence du pare-feu.
